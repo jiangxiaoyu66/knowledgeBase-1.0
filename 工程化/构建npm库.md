@@ -1,3 +1,9 @@
+参考：
+
+[webpack 快速构建 React 学习环境（1）](https://juejin.cn/post/6844903629581713416)
+
+
+
 ## 项目初始化,安装基本依赖
 
 ```js
@@ -72,6 +78,109 @@ npm i html-webpack-plugin -D
 
 
 
+
+## 写页面
+
+```js
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+export default class HelloReact extends React.Component{
+  constructor(props) {
+    super(props);
+  }
+
+  render(){
+    return( <div>Hello React</div>);
+  }
+}
+
+ReactDOM.render(<HelloReact />, document.getElementById('root'));
+
+```
+
+
+
+## 编译 React 应用
+
+安装 babel loader解析es6
+
+```js
+// # Webpack 接入 Babel 必须依赖的模块
+npm i -D babel-core babel-loader 
+// ＃根据我们的需求选择不同的 Plugins Presets
+npm i -D babel-preset-env 
+```
+
+注意：7.0 之后，包名升级为 @babel/core。我的理解，`@babel` 相当于一种官方标记，和以前大家随便起名形成区别。
+
+```js
+yarn add @babel/core @babel/preset-env @babel/preset-react -D
+```
+
+
+
+
+
+
+
+
+
+
+
+## 配置less
+
+### 安装依赖
+
+```js
+npm i css-loader style-loader less-loader -D
+```
+
+
+
+
+
+
+
+
+
+### webpack-config.js配置
+
+```js
+{
+    test: /\.less$/i,
+    loader: [
+      // compiles Less to CSS
+      "style-loader",
+      "css-loader",
+      "less-loader",
+    ],
+  },
+```
+
+
+
+
+
+
+
+### 问题出现：
+
+```
+一、问题的出现：
+在进行 react 项目开发的时候，出现了这个错误，TypeError: this.getOptions is not a function
+
+二. 问题的分析及解决：
+问题的分析：这个实际上就是 less-loader 的版本过高，不兼容 getOptions 函数方法，所以需要对 less-loader 进行降级处理
+问题的解决：通过 npm uninstall less-loader 命令卸载原版本的 less-loader，然后 通过 npm install less-loader@5.0.0 命令下载降级版本的 less-loader，这个问题就可以解决了
+
+```
+
+### 配置cssModule
+
+#### 单配置less只能像下面这样用
+
+![image-20210420114735596](https://gitee.com/jiang-xiaoyu/picture-bed-10/raw/master/images/image-20210420114735596.png)
 
 
 
