@@ -2,30 +2,49 @@
 
 ### JavaScript
 
-- 类型
-  - 类型种类
-  - 类型的判断
-  - 类型的转换
-  - 数据的深浅拷贝
-- 原型和原型链
-  - prototype和__proto__
-  - 执行上下文栈、变量对象、作用域链、this
-  - 执行上下文
-  - 闭包
+1. 数据类型
+  - 有哪些数据类型
+  - 如何判断数据类型
+  - 数据类型的转换
+  - 引用类型的深浅拷贝
+
+
+
+
+
+
+
+
+
+2. 
+
+2. 对象继承
+
+  - 原型和原型链
+
+  - 函数执行
+
+    - 执行上下文
+    - 执行上下文栈、变量对象、作用域链、this、执行上下文栈、变量对象、闭包
+    - 创建对象和继承
     - 变量提升
     - v8垃圾回收
-  - call、apply、bind原理及实现
-  - 创建对象和继承
+    - this
+      - call、apply、bind原理及实现
+
   - oop编程思想
-- ES6
+
+3. ES6
   - let、const
   - 箭头函数
   - Set、Map、WeakSet和WeakMap
-- 异步
+
+4. 异步
   - Promise原理及实现
   - Generator、async和await
   - event loop、宏任务与微任务
-- 模块化
+
+5. 模块化
   - CommonJS和ES6 module
   - AMD和CMD区别（比较旧的可以忽略）
 
