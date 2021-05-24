@@ -1,0 +1,1 @@
+参考：[ES6 中的 Promise](https://juejin.cn/post/6844903919898886157#heading-18)
