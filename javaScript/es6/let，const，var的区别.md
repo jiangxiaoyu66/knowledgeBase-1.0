@@ -12,7 +12,7 @@
 
   1. var存在变量提升，let和const不存在
 
-  2. var刻意重复声明，let和const不可以
+  2. var可以重复声明，let和const不可以
 
   3. var声明的变量是全局作用域，const和let声明的变量是块级作用域
 
